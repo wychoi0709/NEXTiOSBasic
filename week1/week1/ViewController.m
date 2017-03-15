@@ -37,9 +37,12 @@
 
 /**
  *  버튼이나 Stepper 터치
+ *  @param sender
+ *  얘를 마크다운으로 HTML로 만들어줌
+ *  규칙을 맞추면 밑에 메소드에 설명이 붙는다.
+ *  realm이 만든 도큐먼트 만들어주는 놈이 있음
+ *  https://github.com/realm/jazzy <- 찾아볼 것
  */
-
-/* 펜홀더의 케파를 지정한다 */
 - (IBAction)changeValueByStepper:(UIStepper *)sender {
     _capacity = (int)[sender value];
     [_capacityLabel setText:[NSString stringWithFormat:@"%d", _capacity]];

@@ -27,7 +27,7 @@ NSFileManager *nsFileManager;
 - (void) displayAllFilesAtPath:(NSString*)path {
 
     NSError *error;
-    NSArray *filenames = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error];
+    NSArray *filenames = [nsFileManager contentsOfDirectoryAtPath:path error:&error];
     
     if (!error) {
         for (NSString * filename in filenames) {
@@ -42,14 +42,15 @@ NSFileManager *nsFileManager;
 - (void) displayAllFilesAtPath:(NSString*)path
              filterByExtension:(NSString*)extension {
     NSError *error;
-    NSArray *filenames = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error];
+    NSArray *filenames = [nsFileManager contentsOfDirectoryAtPath:path error:&error];
     
     if (!error) {
         for (NSString * filename in filenames) {
             
-            NSString *extension = [filename pathExtension];
+            NSString *_extension = [filename pathExtension];
             
-            if ([extension isEqualToString:@"png"]) {
+            //소름...
+            if ([_extension isEqualToString:extension]) {
                 NSLog(@"%@", filename);
             }
         }

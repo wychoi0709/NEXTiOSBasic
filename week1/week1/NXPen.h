@@ -16,6 +16,7 @@
     int _usage; //100%, 50%, 10%
     
 }
+
 //초기화 메소드
 -(id)initWithBrand:(NSString*)aBrand;
 
