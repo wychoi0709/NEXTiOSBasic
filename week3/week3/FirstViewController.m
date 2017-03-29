@@ -10,13 +10,16 @@
 
 @interface FirstViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
+@property UIImagePickerController * picker;
 @end
 
 @implementation FirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _picker = [[UIImagePickerController alloc] init];
+    _picker.delegate = self;
 }
 
 
@@ -57,41 +60,24 @@
  */
 - (void)doAfterAlbumChoice{
     NSLog(@"doAfterAlbumChoice");
-    UIImagePickerController * picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
     
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-        
-        NSLog(@"앨범이 있으니, 있다고 설정하고 알람을 띄움");
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        picker.allowsEditing = YES;
-        
-        [self presentViewController:picker animated:YES completion:nil];
-        
-    } else {
-        NSLog(@"앨범이 없음(오류)");
-    }
+    _picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    _picker.allowsEditing = YES;
+    
+    [self presentViewController:_picker animated:YES completion:nil];
+
 }
 
 /**
- *  앨범,카메라 피커에서 카메라 선택했을 때 
+ *  앨범,카메라 피커에서 카메라 선택했을 때
  */
 - (void)doAfterCameraChoice{
     NSLog(@"doAfterCameraChoice");
-    UIImagePickerController * picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
     
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        
-        NSLog(@"카메라가 있으니 카메라를 띄움");
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        picker.allowsEditing = YES;
-        
-        [self presentViewController:picker animated:YES completion:nil];
-        
-    } else {
-        NSLog(@"카메라가 없음");
-    }
+    _picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    _picker.allowsEditing = YES;
+    
+    [self presentViewController:_picker animated:YES completion:nil];
 }
 
 /**

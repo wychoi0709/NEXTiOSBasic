@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+
 @end
 
 @implementation DetailViewController
@@ -20,6 +21,8 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(afterLoading:) name:@"myModelItem" object:nil];
+    
+    NSLog(@"itemDic!! %@", _itemDic);
     
 }
 
