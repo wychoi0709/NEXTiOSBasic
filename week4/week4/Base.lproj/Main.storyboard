@@ -17,11 +17,44 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GoView">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0B-fI-UBP" customClass="GoBoardView">
+                                <rect key="frame" x="-0.5" y="20" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrD-tT-fAo" customClass="GoStoneView">
+                                <rect key="frame" x="-0.5" y="20" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqD-Am-0Kx" customClass="GoGraphView">
+                                <rect key="frame" x="-0.5" y="20" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f0B-fI-UBP" firstAttribute="leading" secondItem="lqD-Am-0Kx" secondAttribute="leading" id="1mj-F7-OfV"/>
+                            <constraint firstItem="f0B-fI-UBP" firstAttribute="width" secondItem="lqD-Am-0Kx" secondAttribute="width" id="49f-K2-Eoa"/>
+                            <constraint firstItem="xrD-tT-fAo" firstAttribute="height" secondItem="f0B-fI-UBP" secondAttribute="height" id="530-Lc-azz"/>
+                            <constraint firstItem="lqD-Am-0Kx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7lx-IE-WJ1"/>
+                            <constraint firstItem="lqD-Am-0Kx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="H2p-cf-XRu"/>
+                            <constraint firstItem="f0B-fI-UBP" firstAttribute="top" secondItem="lqD-Am-0Kx" secondAttribute="top" id="PBq-iv-KAM"/>
+                            <constraint firstItem="xrD-tT-fAo" firstAttribute="leading" secondItem="f0B-fI-UBP" secondAttribute="leading" id="YCU-Sl-0X5"/>
+                            <constraint firstItem="f0B-fI-UBP" firstAttribute="height" secondItem="lqD-Am-0Kx" secondAttribute="height" id="j2i-DK-YIc"/>
+                            <constraint firstItem="xrD-tT-fAo" firstAttribute="width" secondItem="f0B-fI-UBP" secondAttribute="width" id="jI7-Ux-k1c"/>
+                            <constraint firstItem="xrD-tT-fAo" firstAttribute="top" secondItem="f0B-fI-UBP" secondAttribute="top" id="oFs-m4-BcZ"/>
+                            <constraint firstItem="lqD-Am-0Kx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="qaq-Xk-UMl"/>
+                            <constraint firstItem="lqD-Am-0Kx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tya-XW-c0q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="goBoardView" destination="f0B-fI-UBP" id="SP4-20-qq7"/>
+                        <outlet property="goGraphView" destination="lqD-Am-0Kx" id="Wtq-qX-fr4"/>
+                        <outlet property="goStoneView" destination="xrD-tT-fAo" id="7e5-9A-exK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

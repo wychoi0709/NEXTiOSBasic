@@ -104,6 +104,7 @@
                             [goCoordinate.coordinatePositionArray[i][j] replaceObjectAtIndex:3 withObject:@"black"];
                             
                             
+                            
                             //해당 위치의 검정 돌 수를 추가한다.
                             NSInteger numberOfBlackStone = [(goGraph.graphLinePositionArray[j])[0] integerValue];
                             numberOfBlackStone ++;

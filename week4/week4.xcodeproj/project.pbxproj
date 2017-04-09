@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F03ECC41E9A5477003E3F76 /* GoBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F03ECC31E9A5477003E3F76 /* GoBoardView.m */; };
+		6F03ECC71E9A5480003E3F76 /* GoStoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F03ECC61E9A5480003E3F76 /* GoStoneView.m */; };
+		6F03ECCA1E9A548C003E3F76 /* GoGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F03ECC91E9A548C003E3F76 /* GoGraphView.m */; };
+		6F03ECCD1E9A5534003E3F76 /* GoBoardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F03ECCC1E9A5534003E3F76 /* GoBoardModel.m */; };
+		6F03ECD01E9A553B003E3F76 /* GoStoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F03ECCF1E9A553B003E3F76 /* GoStoneModel.m */; };
+		6F03ECD31E9A5542003E3F76 /* GoGraphModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F03ECD21E9A5542003E3F76 /* GoGraphModel.m */; };
 		6F6C56D71E966A04004360F8 /* GoCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6C56D61E966A04004360F8 /* GoCoordinate.m */; };
 		6F6C56DA1E967D2E004360F8 /* GoGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6C56D91E967D2E004360F8 /* GoGraph.m */; };
 		6FF265601E94F207000634BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2655F1E94F207000634BB /* main.m */; };
@@ -19,6 +25,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F03ECC21E9A5477003E3F76 /* GoBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoBoardView.h; sourceTree = "<group>"; };
+		6F03ECC31E9A5477003E3F76 /* GoBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoBoardView.m; sourceTree = "<group>"; };
+		6F03ECC51E9A5480003E3F76 /* GoStoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoStoneView.h; sourceTree = "<group>"; };
+		6F03ECC61E9A5480003E3F76 /* GoStoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoStoneView.m; sourceTree = "<group>"; };
+		6F03ECC81E9A548C003E3F76 /* GoGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoGraphView.h; sourceTree = "<group>"; };
+		6F03ECC91E9A548C003E3F76 /* GoGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoGraphView.m; sourceTree = "<group>"; };
+		6F03ECCB1E9A5534003E3F76 /* GoBoardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoBoardModel.h; sourceTree = "<group>"; };
+		6F03ECCC1E9A5534003E3F76 /* GoBoardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoBoardModel.m; sourceTree = "<group>"; };
+		6F03ECCE1E9A553B003E3F76 /* GoStoneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoStoneModel.h; sourceTree = "<group>"; };
+		6F03ECCF1E9A553B003E3F76 /* GoStoneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoStoneModel.m; sourceTree = "<group>"; };
+		6F03ECD11E9A5542003E3F76 /* GoGraphModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoGraphModel.h; sourceTree = "<group>"; };
+		6F03ECD21E9A5542003E3F76 /* GoGraphModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoGraphModel.m; sourceTree = "<group>"; };
 		6F6C56D51E966A04004360F8 /* GoCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoCoordinate.h; sourceTree = "<group>"; };
 		6F6C56D61E966A04004360F8 /* GoCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoCoordinate.m; sourceTree = "<group>"; };
 		6F6C56D81E967D2E004360F8 /* GoGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoGraph.h; sourceTree = "<group>"; };
@@ -55,6 +73,12 @@
 				6F6C56D61E966A04004360F8 /* GoCoordinate.m */,
 				6F6C56D81E967D2E004360F8 /* GoGraph.h */,
 				6F6C56D91E967D2E004360F8 /* GoGraph.m */,
+				6F03ECCB1E9A5534003E3F76 /* GoBoardModel.h */,
+				6F03ECCC1E9A5534003E3F76 /* GoBoardModel.m */,
+				6F03ECCE1E9A553B003E3F76 /* GoStoneModel.h */,
+				6F03ECCF1E9A553B003E3F76 /* GoStoneModel.m */,
+				6F03ECD11E9A5542003E3F76 /* GoGraphModel.h */,
+				6F03ECD21E9A5542003E3F76 /* GoGraphModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -64,6 +88,12 @@
 			children = (
 				6FF265751E94F33E000634BB /* GoView.h */,
 				6FF265761E94F33E000634BB /* GoView.m */,
+				6F03ECC21E9A5477003E3F76 /* GoBoardView.h */,
+				6F03ECC31E9A5477003E3F76 /* GoBoardView.m */,
+				6F03ECC51E9A5480003E3F76 /* GoStoneView.h */,
+				6F03ECC61E9A5480003E3F76 /* GoStoneView.m */,
+				6F03ECC81E9A548C003E3F76 /* GoGraphView.h */,
+				6F03ECC91E9A548C003E3F76 /* GoGraphView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -184,9 +214,15 @@
 			files = (
 				6FF265771E94F33E000634BB /* GoView.m in Sources */,
 				6FF265661E94F207000634BB /* ViewController.m in Sources */,
+				6F03ECC71E9A5480003E3F76 /* GoStoneView.m in Sources */,
 				6F6C56D71E966A04004360F8 /* GoCoordinate.m in Sources */,
+				6F03ECD01E9A553B003E3F76 /* GoStoneModel.m in Sources */,
 				6FF265631E94F207000634BB /* AppDelegate.m in Sources */,
+				6F03ECCA1E9A548C003E3F76 /* GoGraphView.m in Sources */,
+				6F03ECC41E9A5477003E3F76 /* GoBoardView.m in Sources */,
 				6F6C56DA1E967D2E004360F8 /* GoGraph.m in Sources */,
+				6F03ECCD1E9A5534003E3F76 /* GoBoardModel.m in Sources */,
+				6F03ECD31E9A5542003E3F76 /* GoGraphModel.m in Sources */,
 				6FF265601E94F207000634BB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
