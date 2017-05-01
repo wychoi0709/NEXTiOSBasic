@@ -23,6 +23,7 @@
     NSNotificationCenter *defaultNotiCenter;
     Boolean isSorted;
     NSMutableArray *sectionHeaderTextArray;
+    NSMutableArray *rowCountInSectionArray;
 }
 - (IBAction)reorderButtonTouched:(UIBarButtonItem *)sender {
     [_imageManager reorderByDate];
@@ -39,6 +40,7 @@
     [super viewDidLoad];
     defaultNotiCenter = [NSNotificationCenter defaultCenter];
     sectionHeaderTextArray = [[NSMutableArray alloc] init];
+    rowCountInSectionArray = [[NSMutableArray alloc] init];
     
     [self applyNotification];
     _imageManager = [[ImageManager alloc] init];
@@ -78,7 +80,7 @@
 - (void) afterSortedImageManager:(NSNotification*) noti{
     NSLog(@"이미지 sorting 이후 콜백 메소드 진입");
     
-    isSorted = NO;
+    isSorted = YES;
     
     _imageArray = [[noti userInfo] objectForKey:@"sortedImageArray"];
     [_imageTableView reloadData];
@@ -90,16 +92,30 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (isSorted) {
         NSInteger headerCount = 0;
-        NSString *yearForCompare = [[_imageArray[0] objectForKey:@"date"] substringToIndex:3];
+        NSString *yearForCompare = [[_imageArray[0] objectForKey:@"date"] substringToIndex:4];
         [sectionHeaderTextArray addObject:yearForCompare];
+        headerCount++;
+        
+        NSInteger rowCountInSection = 0;
         
         for( int i = 0; i < _imageArray.count; i++ ){
-            NSString *year = [[_imageArray[i] objectForKey:@"date"] substringToIndex:3];
+            NSString *year = [[_imageArray[i] objectForKey:@"date"] substringToIndex:4];
+            
+            rowCountInSection++;
+            
             if( ![year isEqualToString:yearForCompare] ) {
+                [rowCountInSectionArray addObject:[NSNumber numberWithInteger:rowCountInSection]];
+                rowCountInSection = 0;
+                
                 headerCount++;
                 [sectionHeaderTextArray addObject:year];
+                yearForCompare = year;
+                
             }
         }
+        
+        [rowCountInSectionArray addObject:[NSNumber numberWithInteger:rowCountInSection]];
+
         return headerCount;
         
     } else {
@@ -110,7 +126,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if( isSorted ) {
-        
+        return [rowCountInSectionArray[section] integerValue];
     }
     return _imageArray.count;
 }
