@@ -134,7 +134,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AlbumTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"albumTableViewCell" forIndexPath:indexPath];
     
-    NSDictionary *aCell = _imageArray[indexPath.row];
+    NSDictionary *aCell = _imageArray[indexPath.row + indexPath.section];
     NSLog(@"aCell: %@", aCell);
     
     cell.nameLabel.text = [aCell objectForKey:@"title"];

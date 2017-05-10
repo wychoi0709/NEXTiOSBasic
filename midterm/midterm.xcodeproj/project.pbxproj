@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F6747691EC087200028B4CF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6747681EC087200028B4CF /* Reachability.m */; };
 		6F7A65FC1EB739D200F70523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A65FB1EB739D200F70523 /* main.m */; };
 		6F7A65FF1EB739D200F70523 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7A65FE1EB739D200F70523 /* AppDelegate.m */; };
 		6F7A66051EB739D200F70523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7A66031EB739D200F70523 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F6747671EC087200028B4CF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		6F6747681EC087200028B4CF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		6F7A65F71EB739D200F70523 /* midterm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = midterm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F7A65FB1EB739D200F70523 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6F7A65FD1EB739D200F70523 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 				6F7A660B1EB739D200F70523 /* Info.plist */,
 				6F7A65FA1EB739D200F70523 /* Supporting Files */,
 				6F7A66141EB73AB400F70523 /* model */,
+				6F6747671EC087200028B4CF /* Reachability.h */,
+				6F6747681EC087200028B4CF /* Reachability.m */,
 			);
 			path = midterm;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			files = (
 				6F7A65FF1EB739D200F70523 /* AppDelegate.m in Sources */,
 				6F7A661F1EB742CA00F70523 /* AlbumTableViewCell.m in Sources */,
+				6F6747691EC087200028B4CF /* Reachability.m in Sources */,
 				6F7A66181EB740BC00F70523 /* AlbumNavigationViewController.m in Sources */,
 				6F7A65FC1EB739D200F70523 /* main.m in Sources */,
 				6F7A66131EB73AAE00F70523 /* ImageManager.m in Sources */,
