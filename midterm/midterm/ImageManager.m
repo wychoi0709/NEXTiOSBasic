@@ -101,8 +101,8 @@
                                     [sessionWithoutADelegate downloadTaskWithURL:finalUrl completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                                         
                                         //파일을 저장한다.
-                                        NSError *error;
-                                        [[NSFileManager defaultManager] moveItemAtURL:location toURL:<#(nonnull NSURL *)#> error:&error];
+//                                        NSError *error;
+//                                        [[NSFileManager defaultManager] moveItemAtURL:location toURL:<#(nonnull NSURL *)#> error:&error];
 //                                        [[NSFileManager defaultManager]copyItemAtPath:strdestination toPath:toPath error:&Error];
                                         
                                     }];
